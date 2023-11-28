@@ -20,8 +20,10 @@ const NavigationBar = () => {
 
     const navLinks = ['about-me', 'experience', 'showcase', 'contact'];
     let navLinkItems = navLinks.map((link) => (
-        <Link key={link} href={`/#${link}`} passHref>
+        // <Link key={link} href={`/#${link}`} passHref>
             <Button
+                as={Link}
+                href={`portfolio#${link}`}
                 variant='ghost'
                 colorScheme='brand'
                 fontWeight='light'
@@ -29,7 +31,7 @@ const NavigationBar = () => {
             >
                 {'# ' + _.startCase(link)}
             </Button>
-        </Link>
+        // </Link>
     ))
 
     return (
@@ -49,7 +51,7 @@ const NavigationBar = () => {
                     justifyContent={'space-between'}
                     alignItems={'center'}
                 >
-                    <HStack as={Link} href={'/'} align={'baseline'} spacing={0} _hover={{ cursor: 'pointer' }} >
+                    <HStack as={Link} href={''} align={'baseline'} spacing={0} _hover={{ cursor: 'pointer' }} >
                         <Text fontSize='3xl' color='teal.200'>
                             ZHI
                         </Text>

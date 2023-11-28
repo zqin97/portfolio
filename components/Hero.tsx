@@ -40,7 +40,7 @@ const Hero = () => {
 
     const connection = [
         {name: 'LinkedIn', icon: <FaLinkedin/>, href: 'https://www.linkedin.com/in/zhi-qin-ong-4ab577176/'},
-        {name: 'GitHub', icon: <FaGithub/>, href: ''},
+        {name: 'GitHub', icon: <FaGithub/>, href: 'https://github.com/zqin97'},
     ]
 
     const techSkillsGroupItems = () => (
