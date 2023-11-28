@@ -22,6 +22,7 @@ const NavigationBar = () => {
     let navLinkItems = navLinks.map((link) => (
         // <Link key={link} href={`/#${link}`} passHref>
             <Button
+                key={link}
                 as={Link}
                 href={`/${process.env.pathPrefix}#${link}`}
                 variant='ghost'
