@@ -11,7 +11,6 @@ import {
     HStack
 } from "@chakra-ui/react";
 import SlideIntoView from "./SlideIntoView";
-import ThemeSwitch from "./ThemeSwitch";
 import _ from "lodash";
 
 const NavigationBar = () => {
@@ -20,19 +19,19 @@ const NavigationBar = () => {
 
     const navLinks = ['about-me', 'experience', 'showcase', 'contact'];
     let navLinkItems = navLinks.map((link) => (
-        // <Link key={link} href={`/#${link}`} passHref>
-            <Button
-                key={link}
-                as={Link}
-                href={`#${link}`}
-                variant='ghost'
-                colorScheme='brand'
-                fontWeight='light'
+        <Link 
+            key={link} 
+            href={`/#${link}`} 
+        >
+            <Text
+                p={2}
+                fontWeight='medium'
                 onClick={onClose}
+                _hover={{ fontWeight: 'light', color: 'whiteAlpha.800' }}
             >
                 {'# ' + _.startCase(link)}
-            </Button>
-        // </Link>
+            </Text>
+        </Link>
     ))
 
     return (
@@ -63,7 +62,6 @@ const NavigationBar = () => {
                     </HStack>
                     <HStack>
                         {navLinkItems}
-                        <ThemeSwitch />
                     </HStack>
                 </Container>
             </SlideIntoView>

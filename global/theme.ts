@@ -11,8 +11,8 @@ const styles = {
     global: (props: StyleFunctionProps) => ({
         body: {
             fontFamily: 'body',
-            color: mode('gray.800', 'whiteAlpha.900')(props),
-            bg: mode('white', 'blue.900')(props),
+            color: 'whiteAlpha.900',
+            bg: 'blue.900',
             lineHeight: 'base',
         },
     })
