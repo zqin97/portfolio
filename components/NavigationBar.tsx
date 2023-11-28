@@ -24,7 +24,7 @@ const NavigationBar = () => {
             <Button
                 key={link}
                 as={Link}
-                href={`/${process.env.pathPrefix}#${link}`}
+                href={`#${link}`}
                 variant='ghost'
                 colorScheme='brand'
                 fontWeight='light'
