@@ -23,7 +23,7 @@ const NavigationBar = () => {
         // <Link key={link} href={`/#${link}`} passHref>
             <Button
                 as={Link}
-                href={`portfolio#${link}`}
+                href={`${process.env.pathPrefix}#${link}`}
                 variant='ghost'
                 colorScheme='brand'
                 fontWeight='light'
